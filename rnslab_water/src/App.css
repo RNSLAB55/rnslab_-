@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+/* 로그인 화면 */
+.login {
+    padding: 5% 5%;
+}
+.login .title {
+    color: #3DBAEE;
+    font-family: 'Noto Sans KR Bold';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    font-size: 30px;
+}
+.login .account {
+    width: 100%;
+}
+.login .account input{
+    width: 100%;
+    padding-left: 4%;
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 7px;
+    border: 0.9px solid
+}
+.login .account input:focus{
+    width: 94%;
+    padding-left: 4%;
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 7px;
+    outline: 0.1px solid;
+}
+.login button{
+    border: none;
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+    background-color: #3DBAEE;
+    color: white;
+    font-size: 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login .singUp {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login .singUpBtn {
+    text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.login .singUpBtn:hover {
+    cursor: pointer;
+}
+  
+.login .version {
+    margin-top: 50px;
+    text-align: center;
+    color:#787878;
+    font-family: 'Noto Sans KR Bold';
 }
 
-.App-link {
-  color: #61dafb;
+/* 회원가입 */
+.singup {
+    padding: 5% 5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.singup .title {
+    color: #3DBAEE;
+    font-family: 'Noto Sans KR Bold';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    font-size: 30px;
+}
+
+.singup .account {
+    width: 100%;
+}
+
+.singup .account input {
+    width: 100%;
+    padding-left: 4%;
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 7px;
+    border: 0.9px solid;
+}
+
+.singup .account .password {
+    margin-top: 25px;
+}
+
+.singup .account input:focus {
+    width: 100%;
+    padding-left: 4%;
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 7px;
+    outline: 0.1px solid;
+}
+
+.singup .passwordconditions {
+    color: #787878;
+    font-family: 'Noto Sans KR Bold';
+    font-size: 13px;
+}
+
+.singup button {
+    border : none;
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+    background-color: #3DBAEE;
+    color: white;
+    font-size: 18px;
+}
+
+.singup .consent{
+    margin-top: 50px;
+    color: #787878;
+    font-family: 'Noto Sans KR Bold';
+    font-size: 13px;
 }
