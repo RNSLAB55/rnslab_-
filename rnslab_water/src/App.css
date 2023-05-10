@@ -90,6 +90,24 @@
     border: 0.9px solid;
 }
 
+.singup .account .id {
+    width: 80%;
+    padding-left: 4%;
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 7px;
+    border: 0.9px solid;
+}
+
+.singup .account .idCheck {
+    margin: 0;
+    margin-left: 1%;
+    width: 18%;
+    height: 50px;
+    border: 0;
+    text-align: center;
+}
+
 .singup .account .password {
     margin-top: 25px;
 }
