@@ -1,16 +1,48 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect,useState } from "react";
+import axios from "axios";
 
 import logo from "../assets/img/logo.png";
 
 const Login = () => {
     const navigate = useNavigate();
+    const [id, setId] = useState('');
+    const [pw, setPw] = useState('');
+    const [users, setUser] = useState([]);
+
+    const getUsers = async() => {
+        try {
+            const response = await axios.post('/getuser');
+            setUser(response.data);
+        } catch(err) {
+            console.log("Error >>",err);
+        }
+    }
+
+    useEffect(() => {
+        getUsers();
+    },[]);
+
+    const checkIDPW = () => {
+        let check = false;
+        users && users.map((user) => {
+            if(id === user.userID && pw === user.userPW) {
+                check = true;
+            }
+        })
+        return check;
+    }
 
     const goSingUp = () => {
-        navigate("/singup");
+            navigate("/singup");
     }
 
     const goMain = () => {
-        navigate("/main");
+        if(checkIDPW()){
+            navigate("/main");
+        }else{
+            alert("Please check your input");
+        }
     }
 
     return (
@@ -20,8 +52,8 @@ const Login = () => {
             </div>
             <div className="title">로그인</div>
             <div className="account">
-                <input placeholder="아이디를 입력 해주세요"></input>
-                <input placeholder="비밀번호를 입력 해주세요" type="password"></input>
+                <input value={id} onChange={(e) => setId(e.target.value)} placeholder="아이디를 입력 해주세요"></input>
+                <input value={pw} onChange={(e) => setPw(e.target.value)} placeholder="비밀번호를 입력 해주세요" type="password"></input>
             </div>
             <button onClick={goMain}>로그인</button>
             <div className="singUp">

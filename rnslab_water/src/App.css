@@ -23,7 +23,7 @@
     border: 0.9px solid
 }
 .login .account input:focus{
-    width: 94%;
+    width: 100%;
     padding-left: 4%;
     margin-bottom: 10px;
     height: 50px;
@@ -81,44 +81,57 @@
     width: 100%;
 }
 
+.singup .account .input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
 .singup .account input {
     width: 100%;
     padding-left: 4%;
-    margin-bottom: 10px;
     height: 50px;
     border-radius: 7px;
     border: 0.9px solid;
+}
+
+.singup .account input:focus {
+    width: 100%;
+    padding-left: 4%;
+    height: 50px;
+    border-radius: 7px;
+    outline: 0.1px solid;
 }
 
 .singup .account .id {
-    width: 80%;
+    color: black;
+    width: 76%;
     padding-left: 4%;
-    margin-bottom: 10px;
     height: 50px;
     border-radius: 7px;
     border: 0.9px solid;
 }
 
-.singup .account .idCheck {
-    margin: 0;
-    margin-left: 1%;
-    width: 18%;
+.singup .account .id:focus {
+    width: 76%;
+    padding-left: 4%;
     height: 50px;
-    border: 0;
-    text-align: center;
+    border-radius: 7px;
+    outline: 0.1px solid;
+}
+
+.singup .account .idCheck {
+    width: 22%;
+    margin-left: 2%;
 }
 
 .singup .account .password {
     margin-top: 25px;
 }
 
-.singup .account input:focus {
-    width: 100%;
-    padding-left: 4%;
-    margin-bottom: 10px;
-    height: 50px;
-    border-radius: 7px;
-    outline: 0.1px solid;
+.singup .account span{
+    color: #787878;
+    font-family: 'Noto Sans KR Bold';
+    font-size: 13px;
 }
 
 .singup .passwordconditions {
@@ -129,7 +142,6 @@
 
 .singup button {
     border : none;
-    margin-top: 20px;
     width: 100%;
     height: 50px;
     border-radius: 7px;
@@ -138,7 +150,11 @@
     font-size: 18px;
 }
 
-.singup .consent{
+.singup .account .singupbtn {
+    margin-top: 20px;
+}
+
+.singup .account .consent{
     margin-top: 50px;
     color: #787878;
     font-family: 'Noto Sans KR Bold';
